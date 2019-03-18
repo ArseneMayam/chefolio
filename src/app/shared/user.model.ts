@@ -1,4 +1,5 @@
 export class User {
+
     constructor(private _id: number, private _userName: string, private _pwd: string) { }
     //getters and setters
     public get id(): number {
