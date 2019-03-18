@@ -13,13 +13,15 @@ export class ProfilePictureComponent implements OnInit {
   }
   onSelectedFile(event: any) {
     if (event.target.files && event.target.files[0]) {
-      let reader = new FileReader();
+      const reader = new FileReader();
       reader.readAsDataURL(event.target.files[0]);
       reader.onload = (event) => {
-        this.imageUrl = event.target.result;
-        console.log(this.imageUrl);
-      }
-
+        const url: string | ArrayBuffer = reader.result;
+        if (typeof url === 'string') {
+          this.imageUrl = url;
+          console.log(this.imageUrl);
+        }
+      };
     }
   }
 
