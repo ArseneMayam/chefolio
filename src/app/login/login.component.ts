@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
+
 
 @Component({
   selector: 'app-login',
@@ -14,7 +16,7 @@ export class LoginComponent implements OnInit {
   // tslint:disable-next-line: variable-name
   private _isLoginIncorrect = false;
   // methods
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -23,12 +25,12 @@ export class LoginComponent implements OnInit {
   }
   userLogIn() {
     const username = this.unameInput.nativeElement.value;
-    console.log('username', username);
     const passwd = this.pwd.nativeElement.value;
-    console.log('password', passwd);
     const isLoginValid = this.loginService.login(username, passwd);
-    console.log('login ', isLoginValid);
     this._isLoginIncorrect = !isLoginValid;
+    if (isLoginValid) {
+      this.router.navigate(['profile']);
+    }
   }
 
 

@@ -10,7 +10,7 @@ export class LoginService {
 
   }
   private userList: User[] = [
-    new User(0, 'Luc', 'abc')
+    new User(0, 'Luc', 'abcd')
   ]
 
   public login(uname: string, pwd: string): boolean {
