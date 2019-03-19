@@ -1,0 +1,13 @@
+#smList {
+    display: flex;
+    justify-content: space-between;
+}
+.socialMediaDiv{
+    width: 500px;
+}
+.socialMediaDiv ul{
+    list-style-type: none;
+}
+.socialMediaDiv ul li{
+    display: inline-block;
+}

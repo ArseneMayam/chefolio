@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfilePictureComponent } from './profile-picture/profile-picture.component';
+import { SocialNetworkComponent } from './social-network/social-network.component';
+import { ProfilDescriptionComponent } from './profil-description/profil-description.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -18,7 +20,9 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     ProfileComponent,
-    ProfilePictureComponent
+    ProfilePictureComponent,
+    SocialNetworkComponent,
+    ProfilDescriptionComponent
   ],
   imports: [
     BrowserModule,
