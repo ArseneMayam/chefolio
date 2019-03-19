@@ -1,3 +1,7 @@
+.profileDiv{
+  display: flex;
+  justify-content: space-between;
+}
 .imageProfile{
     display: flex;
   align-items: center;
